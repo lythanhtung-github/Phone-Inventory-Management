@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Inventory Management</title>
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+    <div class="div_top">
+        <div>
+            <img id="div_top_img" src="https://shopapple123.com/images/logo_share.png" alt="">
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <ion-icon name="search-outline"></ion-icon>
+                </li>
+                <li><a href = "index.html">Log out</a></li> 
+                <li>User</li>
+                <li>Support</li>
+                <li>Contact</li>
+                <li>Home</li>
+            </ul>
+        </div>
+    </div>
+    <div class="div_body">
+        <div class="div_body_left">
+            <div class="body_left">
+                <div class="body_left_top">Import</div>
+                <div class = "left-box">
+                    <p>1. Product</p> 
+                    <p>2. Manufacturer</p>
+                </div>
+            </div>
+            <div class="body_left">
+                <div class="body_left_top">Export</div>
+                <div class = "left-box">
+                    <p>1. Product</p> 
+                    <p>2. Customer</p>
+                </div>
+            </div>
+            <div class="body_left">
+                <div class="body_left_top">Sell</div>
+                <div class = "left-box">
+                    <p>1. Add</p> 
+                    <p>2. Update</p>
+                    <p>3. Delete</p>
+                </div>
+            </div>
+            <div class="body_left">
+                <div class="body_left_top">Accountant</div>
+                <div class = "left-box" >
+                    <p>1. Add</p> 
+                    <p>2. Update</p>
+                    <p>3. Delete</p>
+                </div>
+            </div>
+        </div>
+        <div id="div_container">
+            <div id="div_container_top">Moblie information</div>
+
+            <div class="div-form-create">
+                <div class="div-create-product">
+                    <div class="div_information div_information_img">
+                        <input onchange="changeImage()" id="image_Change" type="image">
+                    </div>
+
+                    <div class="div_information div_information_info">
+                        <div class="information_group">
+                            <input class="ip_information" type="hidden" id="ip_id" value="">
+                        </div>
+                        <div class="information_group">
+                            <label class="lb_information" for="ip_name">Name: </label>
+                            <input class="ip_information" type="text" id="ip_name">
+                        </div>
+                        <div class="information_group">
+                            <label class="lb_information" for="ip_series">Manufacturer: </label>
+                            <input class="ip_information" type="text" id="ip_series">
+                        </div>
+                        <div class="information_group">
+                            <label class="lb_information" for="ip_price">Price: </label>
+                            <input class="ip_information" type="number" id="ip_price" min="1000000">
+                        </div>
+                        <div class="information_group">
+                            <label class="lb_information" for="ip_amount">Amount: </label>
+                            <input class="ip_information" type="number" id="ip_amount" min="1">
+                        </div>
+
+                        <div class="information_group">
+                            <label class="lb_information">Image: </label>
+                            <input class="ip_information" type="text" id="ip_img">
+                        </div>
+                    </div>
+
+                    <div class="div_information div_information_button">
+                        <button onclick="addProduct()" class="btn btn_add" type="button">Add</button>
+                        <button id="saveProduct" onclick="saveProduct()" class="btn btn_save d-none"
+                            type="button">Save</button>
+                        <button id="cancelProduct" onclick="cancelProduct()" class="btn btn_delete d-none"
+                            type="button">Cancel</button>
+                        <button onclick="reset()" class="btn btn_reset" type="button">Reset</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="div-button-find">
+                <label class="lb_information">Search</label>
+                <input class="ip_information" oninput="searchProduct()" id="ip_find" type="text">
+                <input type="radio" id="rd_name" name="find" value="name" checked>
+                <label class="lb_radio" for="rd_name">Name</label>
+                <input type="radio" id="rd_series" name="find" value="series">
+                <label class="lb_radio" for="rd_series">Manufacturer</label>
+            </div>
+
+            <div class="div-form-list">
+                <table id="tb-all-products">
+                    <thead>
+                        <tr style="height: 50px;">
+                            <td>ID
+                                <label class="up-down" onclick="sortProduct('asc','id')">&#x25B2;</label>
+                                <label class="up-down" onclick="sortProduct('des','id')">&#x25BC;</label>
+                            </td>
+                            <td>NAME
+                                <label class="up-down" onclick="sortProduct('asc','name')">&#x25B2;</label>
+                                <label class="up-down" onclick="sortProduct('des','name')">&#x25BC;</label>
+                            </td>
+                            <td>PRICE
+                                <label class="up-down" onclick="sortProduct('asc','price')">&#x25B2;</label>
+                                <label class="up-down" onclick="sortProduct('des','price')">&#x25BC;</label>
+                            </td>
+                            <td>MANUFACTURER
+                                <label class="up-down" onclick="sortProduct('asc','series')">&#x25B2;</label>
+                                <label class="up-down" onclick="sortProduct('des','series')">&#x25BC;</label>
+                            </td>
+                            <td>AMOUNT
+                                <label class="up-down" onclick="sortProduct('asc','amount')">&#x25B2;</label>
+                                <label class="up-down" onclick="sortProduct('des','amount')">&#x25BC;</label>
+                            </td>
+                            <td>IMAGE</td>
+                            <td>ACTION</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="page-number-box">
+                <div class="pagination-box">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</body>
+<script src="js/mobile.js"></script>
+
+</html>

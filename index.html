@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div  class="login-register-box login-box">
+        <h2>Login</h2>
+        <form>
+            <div class="user-box">
+                <input  id = "loginUserName" type="text" name="" required="" value="admin">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input id = "loginPassWord" type="password" name="" required="" value="admin">
+                <label>Password</label>
+            </div>
+            <a onclick = "submitLogin()" id = "login" href="#" class = "submit-box">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
+            <a onclick = "signUp()" id = "signUp" href="#" class = "submit-box">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Sign Up
+            </a>
+        </form>
+    </div>
+    <div class="login-register-box register-box d-none">
+        <h2>Register</h2>
+        <form>
+            <div class="user-box">
+                <input  id = "registerUserName" type="text" name="" required="" value="">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input id = "registerName" type="text" name="" required="" value="">
+                <label>Name</label>
+            </div>
+            <div class="user-box">
+                <input  id = "registerEmail" type="text" name="" required="" value="">
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input  id = "registerPhone" type="text" name="" required="" value="">
+                <label>Phone Number</label>
+            </div>
+
+            <div class="user-box">
+                <input  id = "registerPassword" type="password" name="" required="" value="">
+                <label>Password</label>
+            </div>
+            <div class="user-box">
+                <input  id = "registerConfirmPassword" type="password" name="" required="" value="">
+                <label>Confirm password</label>
+            </div>
+           
+            <a onclick = "submitRegister()" id = "register" href="#" class = "submit-box">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
+            <a onclick="cancelRegister()"  id = "cancelRegister" href="#" class = "submit-box">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Cancel
+            </a>
+        </form>
+    </div>
+<script src="js/login.js"></script>
+</body>
+</html> 
