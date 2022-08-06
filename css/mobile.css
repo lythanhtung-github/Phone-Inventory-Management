@@ -69,6 +69,7 @@ a {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     text-align: center;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, .3);
 }
 
 .left-box {
