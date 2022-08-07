@@ -1,4 +1,5 @@
 # Phone-Inventory-Management
+#Username: admin, password: admin
 1. Functions:
 - show products on table.
 - Create a new product.
