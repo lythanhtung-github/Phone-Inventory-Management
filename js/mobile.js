@@ -111,7 +111,7 @@ function addProduct() {
             : productSeries.value.trim() == "" ? alert("Please enter a product series!")
                 : productAmount.value.trim() == "" ? alert("Please enter a product amount!")
                     : productImg.value.trim() == "" ? alert("Please enter a product image!")
-                        : products.push(new Product(getLastId() + 1, productName.value, productPrice.value, productSeries.value, productAmount.value, productImg.value));
+                        : products.push(new Product(Number(getLastId()) + 1, productName.value, productPrice.value, productSeries.value, productAmount.value, productImg.value));
     setData(key_data, products);
     renderPagination(page_size, default_page_number);
     renderProduct(products, default_page_number);
