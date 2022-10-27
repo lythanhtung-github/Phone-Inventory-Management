@@ -1,3 +1,4 @@
+#CASE STUDY MODULE 1 - JAVA SCRIPT - HTML - CSS
 # Phone-Inventory-Management
 #Username: admin, password: admin
 1. Functions:
