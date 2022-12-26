@@ -1,6 +1,5 @@
 #CASE STUDY MODULE 1 - JAVA SCRIPT - HTML - CSS
 # Phone-Inventory-Management
-#Username: admin, password: admin
 1. Functions:
 - show products on table.
 - Create a new product.
@@ -10,7 +9,9 @@
 - Sort product.
 - Login by username + password.
 - Register
-# Link product: https://lythanhtung-github.github.io/Phone-Inventory-Management/
-# Account:
+2. Link product: https://lythanhtung-github.github.io/Phone-Inventory-Management/
+3. Account:
 - username: admin
 - password: admin
+4. Image:
+![Screenshot](product.png)
