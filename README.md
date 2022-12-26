@@ -10,4 +10,7 @@
 - Sort product.
 - Login by username + password.
 - Register
- 
+#Link product: https://lythanhtung-github.github.io/Phone-Inventory-Management/
+# Account:
+- username: admin
+- password: admin
